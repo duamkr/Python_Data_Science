@@ -15,9 +15,10 @@ titanic.count()
 # 연습 문제 4.2.6
 # 타이타닉호 승객중 성별(sex) 인원수, 나이별(age) 인원수, 선실별(class) 인원수, 사망/생존(alive) 인원수를 구하라.
 
-
-
-
+titanic['sex'].value_counts()
+titanic['age'].value_counts()
+titanic['class'].value_counts()
+titanic['alive'].value_counts()
 
 # 연습 문제 4.2.7
 bins = [1, 15, 25, 35, 60, 99]
