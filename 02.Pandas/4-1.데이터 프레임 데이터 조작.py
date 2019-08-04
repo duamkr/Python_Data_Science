@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-
+print('hello')
 # 데이터 갯수 세기
 s = pd.Series(range(10))
 s[3] = np.nan    # 0~9 값을 가지는 시리즈 생성, 3은 NaN을 가진 변수 생성
@@ -67,4 +67,31 @@ df3.apply(pd.value_counts)
 df3.apply(pd.value_counts,axis = 1)
 
 
+# 실수값을 카테고리 값으로 변환 / cut, qcut
+
+ages = [0, 2, 10, 21, 23, 37, 31, 61, 20, 41, 32, 100]
+
+bins = [1, 15, 25, 35, 60, 99]     # 카테고리를 나누는 기준값 설정
+labels = ["미성년자", "청년", "중년", "장년", "노년"]      # 카테고리의 기준값인 bins 와 자리수가 같도록 설정
+cats = pd.cut(ages, bins, labels=labels)         # age리스트를 bins를 기준 분류, 분류된 labels = labels
+
+
+cats
+type(cats)           # Categorical 클래스 객체
+cats.categories      # cats 카테고리 확인
+cats.codes     # age의 라벨문자열을 codes속성 정수로 인코딩된 카테고리 값, 이는 미셩년이 0,청년 1, 중년 2, 장년 3, 노년 4이며, age의 리스트 순서대로 정수로 나열됨
+
+
+# 데이터 프레임으로 추가하기,  ages를 데이터프레임으로 만들고,   age_cat 을 cut 으로 정의해줌
+df4 = pd.DataFrame(ages, columns = ["ages"])
+df4["age_cat"] = pd.cut(df4.ages, bins, labels=labels )
+df4
+
+
+
+# qcut  /  경계선을 지정하지 않고 데이터 갯수가 같도록 지정, 1000개의 데이터 -> 4개구간으로 나누면 250개씩 나눠 가짐
+
+data = np.random.randn(1000)
+cats = pd.qcut(data, 4, labels = ["Q1", "Q2", "Q3", "Q4"])
+cats
 
