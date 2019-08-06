@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import seaborn as sns
 
 
 data = {
@@ -80,4 +81,59 @@ def top3_petal_length(df):
     return df.sort_values(by="petal_length", ascending=False)[:3]     # 붓꽃 종별 가장 긴 꽃잎 길이(petal length)
 
 iris.groupby(iris.species).apply(top3_petal_length)
+
+
+
+### pivot_table / groupby의 unstack을 자동적용하여 그룹분석 -> 2차원 형태 변형
+
+df1.pivot_table("인구","도시","연도")
+
+# margins = True로 지정시 행 열, 전체의 평균을 구함 (aggfunc으로 지정한 계산, default = 평균)
+df1.pivot_table("인구","도시","연도",margins= True)
+
+df1['인구'].mean()
+df1['인구'].sum()
+
+# pivot_table('분석값', index= [], columns=[] )
+df1.pivot_table('인구', index = ['연도', '도시'])
+df1.pivot_table('인구', index = ['연도', '도시'])
+
+
+
+# tip 데이터
+
+tips = sns.load_dataset("tips")
+tips.tail()
+
+tips["tip_pct"] = tips['tip'] / tips['total_bill']
+
+# 각 열의 다양한 데이터 분포 확인
+tips.describe()
+
+# 그룹별 통계( 같은 값을 추출하지만, size가 더 간단히 표시됨)
+tips.groupby('sex').count()
+tips.groupby("sex").size()
+
+# groupby 활용 카운트
+tips.groupby(["sex", "smoker"]).size()
+
+# pivot_table 활용 카운트
+tips.pivot_table("tip_pct", "sex", "smoker", aggfunc="count", margins=True)
+
+# 성별과 흡연여부에 따른 팁 비율_groupby
+tips.groupby('sex')[["tip_pct"]].mean()
+
+tips.groupby("smoker")[["tip_pct"]].mean()
+
+# 성별과 흡연여부에 따른 팁 비율 / pivot_table
+tips.pivot_table('tip_pct','sex')
+tips.pivot_table('tip_pct','smoker')
+
+tips.pivot_table("tip_pct", index = ["sex", "smoker"])   # 위와 같음
+tips.pivot_table("tip_pct", "sex", "smoker")     #위와 같은 값이지만 표현 방식ㅇ ㅣ다름
+
+# describe 여러 통계값
+tips.groupby("sex")[['tip_pct']].describe()
+tips.groupby("smoker")[['tip_pct']].describe()
+tips.groupby(["sex", "smoker"])[["tip_pct"]].describe()
 

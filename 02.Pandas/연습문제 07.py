@@ -27,3 +27,19 @@ iris.groupby(iris.species).apply(flower)
 # 연습 문제 3
 # 1. 팁의 비율이 요일과 점심/저녁 여부, 인원수에 어떤 영향을 받는지 살펴본다.
 # 2. 어떤 요인이 가장 크게 작용하는지 판단할 수 있는 방법이 있는가?
+
+import seaborn as sns
+tips = sns.load_dataset("tips")
+tips.tail()
+
+tips["tip_pct"] = tips['tip'] / tips['total_bill']
+tips.head()
+tips.columns
+# 1.
+tips.pivot_table('tip_pct', index = ['day','time','size'])
+
+# 2.
+tips.columns
+tips.pivot_table('tip_pct', index = ['total_bill', 'tip', 'sex', 'smoker', 'day', 'time', 'size'])
+a.sort_values(by =['tip_pct'])
+a.head()
