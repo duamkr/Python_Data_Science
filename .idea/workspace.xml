@@ -14,12 +14,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/05.파이썬으로데이터주무르기/과제26_커피지수.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/05.파이썬으로데이터주무르기/커피지수/과제26_커피지수.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="126">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/05.파이썬으로데이터주무르기/커피지수/과제26_커피지수_커피빈.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -46,6 +58,7 @@
         <option value="$PROJECT_DIR$/02.Pandas/연습문제 07.py" />
         <option value="$PROJECT_DIR$/06.Deep Learning/2.처음해보는 딥러닝.py" />
         <option value="$PROJECT_DIR$/05.파이썬으로데이터주무르기/과제26_커피지수.py" />
+        <option value="$PROJECT_DIR$/05.파이썬으로데이터주무르기/커피지수/과제26_커피지수_커피빈.py" />
       </list>
     </option>
   </component>
@@ -64,7 +77,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -77,17 +89,24 @@
               <item name="Python_Data_Science" type="462c0819:PsiDirectoryNode" />
               <item name="05.파이썬으로데이터주무르기" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Python_Data_Science" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python_Data_Science" type="462c0819:PsiDirectoryNode" />
+              <item name="05.파이썬으로데이터주무르기" type="462c0819:PsiDirectoryNode" />
+              <item name="커피지수" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Deep_Learning" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -172,7 +191,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12065332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12065332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
@@ -184,7 +203,7 @@
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Python Console" order="9" visible="true" weight="0.32394367" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="9" visible="true" weight="0.6468039" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -256,10 +275,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05.파이썬으로데이터주무르기/과제26_커피지수.py">
+    <entry file="file://$PROJECT_DIR$/05.파이썬으로데이터주무르기/과제26_커피지수.py" />
+    <entry file="file://$PROJECT_DIR$/05.파이썬으로데이터주무르기/커피지수/과제26_커피지수.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="126">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05.파이썬으로데이터주무르기/커피지수/과제26_커피지수_커피빈.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
